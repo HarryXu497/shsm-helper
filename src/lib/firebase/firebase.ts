@@ -1,6 +1,5 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import {
 	API_KEY,
 	AUTH_DOMAIN,
@@ -12,8 +11,8 @@ import {
 	MEASUREMENT_ID
 } from "$env/static/private";
 import { CollectionReference, collection, getFirestore } from "@firebase/firestore";
-import { getAuth } from "@firebase/auth";
 import type SHSMEvent from "$lib/types/SHSMEvent.model";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -34,6 +33,5 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore(app)
-export const fireAuth = getAuth(app)
 
 export const events = collection(db, "events") as CollectionReference<SHSMEvent>;

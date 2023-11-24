@@ -5,12 +5,12 @@
 <header class="header">
 	<nav class="nav">
 		<div class="nav__logo">
-			MYSHSM
+			<a href="/">MYSHSM</a>
 		</div>
 		<div class="nav__links">
 			<ul>
-				<li><a href="/log-in">Log In</a></li>
-				<li><a href="/sign-up">Sign Up</a></li>
+				<li><a href="/login">Log In</a></li>
+				<li><a href="/signup">Sign Up</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -24,7 +24,7 @@
 		
 		padding: 2rem 2rem;
 
-		background-color: var(--color-primary);
+		background-color: var(--color);
 		color: white;
 	}
 
@@ -48,6 +48,9 @@
 		display: flex;
 		flex-direction: row;
 		gap: 0.5rem;
-		
+	}
+
+	a:hover {
+		cursor: pointer;
 	}
 </style>

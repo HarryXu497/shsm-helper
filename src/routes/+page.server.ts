@@ -8,12 +8,9 @@ export const load: PageServerLoad = async ({ params }) => {
 		.then(value => value.docs)
 		.then(value => value.map(snapshot => ({ id: snapshot.id, data: snapshot.data() })))
 		.then(value => {
-			value.forEach(event => event.data.date = event.data.date.toJSON() as Timestamp);
+			value.forEach(event => event.data.date = (event.data.date as unknown as Timestamp).toMillis() as any);
 			return value;
 		})
 
-	return {
-		documents: documents
-	}
-	
+	return { documents }
 };

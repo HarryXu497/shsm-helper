@@ -21,8 +21,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@firebase/auth": "^1.4.0",
 		"@firebase/firestore": "^4.3.2",
+		"remixicon": "^3.5.0",
 		"sass": "^1.69.5"
 	}
 }

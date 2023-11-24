@@ -1,13 +1,6 @@
-import { fireAuth } from "$lib/firebase/firebase";
-import type { User } from "@firebase/auth";
+import type Student from "$lib/types/Student.model";
+import type Teacher from "$lib/types/Teacher.model";
 import { writable } from "svelte/store";
 
-export type AuthState = User | null;
-
-
-const auth = writable<AuthState>(null);
-
-fireAuth.onAuthStateChanged((state) => {
-	auth.set(state)
-})
+export const auth = writable<Student | Teacher | null>(null);
 
