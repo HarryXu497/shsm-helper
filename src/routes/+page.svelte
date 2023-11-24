@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+  	import Navbar from '$lib/components/Navbar.svelte';
+	import type { PageServerData } from './$types';
+	
+	export let data: PageServerData;
+</script>
+
+<Navbar/>
+{#each data.documents as document}
+	{JSON.stringify(document)}
+{/each}
