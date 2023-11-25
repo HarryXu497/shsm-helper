@@ -1,5 +1,7 @@
 # SHSM Helper
 
+![icon](static/favicon.png)
+
 A tool to make SHSM easier for both teachers and students.
 
 ## Developing
